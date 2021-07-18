@@ -9,7 +9,7 @@ import java.net.URL;
 public class Utils {
     static String os = System.getProperty("os.name").toLowerCase();
 
-    public void OpenWebsite(String siteUrl) {
+    public static void OpenWebsite(String siteUrl) {
         try {
             Desktop.getDesktop().browse(new URL(siteUrl).toURI());
         } catch (Exception e) {
@@ -17,7 +17,7 @@ public class Utils {
         }
     }
 
-    public String CheckOSRunning() {
+    public static String CheckOSRunning() {
         if (isWin()) {
             Logging.info("Running on Windows " + "(" + os + ")");
         } else if (isMac()) {

@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Creator {
-    public void CreateFolder(String folderName, String folderPath) {
+    public static void CreateFolder(String folderName, String folderPath) {
         String path = folderPath + folderName;
         File file = new File(path);
         boolean bool = file.mkdir();
@@ -15,7 +15,7 @@ public class Creator {
         }
     }
 
-    public void CreateFile(String fileName, String filePath) {
+    public static void CreateFile(String fileName, String filePath) {
         String path = filePath + fileName;
         File file = new File(path);
         try {
